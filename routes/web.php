@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Hello Laravel 2025";
+});
+
+// About page route
+Route::get('/about', function () {
+    return "This is the About page";
 });
