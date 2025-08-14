@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/db-check', function () {
-    try {
-        DB::connection()->getPdo();
-        return "✅ Database connection is OK!";
-    } catch (\Exception $e) {
-        return "❌ Could not connect to the database. Error: " . $e->getMessage();
-    }
-});
+// Route::get('/db-check', function () {
+//     try {
+//         DB::connection()->getPdo();
+//         return "✅ Database connection is OK!";
+//     } catch (\Exception $e) {
+//         return "❌ Could not connect to the database. Error: " . $e->getMessage();
+//     }
+// });
 
 Route::get('/', function () {
     return "Hello Laravel 2025";
