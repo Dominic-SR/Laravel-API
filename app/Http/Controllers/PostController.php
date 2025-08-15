@@ -37,7 +37,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->only(['title','body']);
-        Post::create();
+        Post::create($data);
         return response(['message'=>'Post created successfully!'],200);
     }
 
