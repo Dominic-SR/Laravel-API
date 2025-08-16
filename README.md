@@ -1,3 +1,4 @@
+LARAVEL RESOURCE API CRUD
 create project ->  composer create-project laravel/laravel Laravel-API
 create migration -> php artisan make:migration create_posts_table 
 run migration -> php artisan migrate 
