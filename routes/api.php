@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\BookController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,4 +20,14 @@ use App\Http\Controllers\PostController;
 //     return $request->user();
 // });
 
+// Resource API Routes Start
 Route::resource('posts', PostController::class);
+// Resource API Routes End
+
+// Manual API Routes Start
+Route::get('/posts', [PostController::class, 'index']);   // List
+Route::post('/posts', [PostController::class, 'store']);  // Create
+Route::get('/posts/{id}', [PostController::class, 'show']);  // Read single
+Route::put('/posts/{id}', [PostController::class, 'update']); // Update
+Route::delete('/posts/{id}', [PostController::class, 'destroy']); // Delete
+// Manual API Routes End
