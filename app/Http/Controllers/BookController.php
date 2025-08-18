@@ -17,7 +17,6 @@ class BookController extends Controller
     // POST /api/posts
     public function store(Request $request)
     {
-        print_r("DDDD");
         $request->validate([
             'book_name' => 'required',
             'book_desc' => 'required'

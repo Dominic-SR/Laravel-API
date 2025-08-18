@@ -24,10 +24,5 @@ use Illuminate\Support\Facades\DB;
 // });
 
 Route::get('/', function () {
-    return "Hello Laravel 2025";
-});
-
-// About page route
-Route::get('/about', function () {
-    return "This is the About page";
+    return "Hello world";
 });
