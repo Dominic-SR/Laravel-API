@@ -11,7 +11,7 @@ class BookController extends Controller
      // GET /api/posts
     public function index()
     {
-        return response()->json(Post::all(), 200);
+        return response()->json(Books::all(), 200);
     }
 
     // POST /api/posts
@@ -22,14 +22,14 @@ class BookController extends Controller
             'book_desc' => 'required'
         ]);
 
-        $post = Post::create($request->only(['book_name','book_desc']));
+        $post = Books::create($request->only(['book_name','book_desc']));
         return response()->json($post, 201);
     }
 
     // GET /api/posts/{id}
     public function show($id)
     {
-        $post = Post::find($id);
+        $post = Books::find($id);
         if (!$post) {
             return response()->json(['message' => 'Post not found'], 404);
         }
@@ -39,7 +39,7 @@ class BookController extends Controller
     // PUT /api/posts/{id}
     public function update(Request $request, $id)
     {
-        $post = Post::find($id);
+        $post = Books::find($id);
         if (!$post) {
             return response()->json(['message' => 'Post not found'], 404);
         }
@@ -56,7 +56,7 @@ class BookController extends Controller
     // DELETE /api/posts/{id}
     public function destroy($id)
     {
-        $post = Post::find($id);
+        $post = Books::find($id);
         if (!$post) {
             return response()->json(['message' => 'Post not found'], 404);
         }
