@@ -17,12 +17,13 @@ class BookController extends Controller
     // POST /api/posts
     public function store(Request $request)
     {
+        print_r("DDDD");
         $request->validate([
-            'title' => 'required',
-            'content' => 'required'
+            'book_name' => 'required',
+            'book_desc' => 'required'
         ]);
 
-        $post = Post::create($request->only(['title','content']));
+        $post = Post::create($request->only(['book_name','book_desc']));
         return response()->json($post, 201);
     }
 
@@ -45,11 +46,11 @@ class BookController extends Controller
         }
 
         $request->validate([
-            'title' => 'required',
-            'content' => 'required'
+            'book_name' => 'required',
+            'book_desc' => 'required'
         ]);
 
-        $post->update($request->only(['title','content']));
+        $post->update($request->only(['book_name','book_desc']));
         return response()->json($post, 200);
     }
 

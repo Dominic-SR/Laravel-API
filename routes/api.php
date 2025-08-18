@@ -25,9 +25,9 @@ Route::resource('posts', PostController::class);
 // Resource API Routes End
 
 // Manual API Routes Start
-Route::get('/posts', [PostController::class, 'index']);   // List
-Route::post('/posts', [PostController::class, 'store']);  // Create
-Route::get('/posts/{id}', [PostController::class, 'show']);  // Read single
-Route::put('/posts/{id}', [PostController::class, 'update']); // Update
-Route::delete('/posts/{id}', [PostController::class, 'destroy']); // Delete
+Route::get('/books', [BookController::class, 'index']);   // List
+Route::post('/books', [BookController::class, 'store']);  // Create
+Route::get('/books/{id}', [BookController::class, 'show']);  // Read single
+Route::put('/books/{id}', [BookController::class, 'update']); // Update
+Route::delete('/books/{id}', [BookController::class, 'destroy']); // Delete
 // Manual API Routes End
