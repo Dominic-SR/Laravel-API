@@ -1,4 +1,5 @@
 LARAVEL PROJECT SETUP
+
 create project ->  composer create-project laravel/laravel Laravel-API
 
 LARAVEL RESOURCE API CRUD
