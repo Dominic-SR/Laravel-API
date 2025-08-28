@@ -23,7 +23,7 @@ class BookController extends Controller
         ]);
 
         $post = Books::create($request->only(['book_name','book_desc']));
-        return response()->json($post, 201);
+        return response()->json(["status"=>true, 'message'=>'created successfully !', 'data'=>$post], 201);
     }
 
     // GET /api/posts/{id}
@@ -50,7 +50,7 @@ class BookController extends Controller
         ]);
 
         $post->update($request->only(['book_name','book_desc']));
-        return response()->json($post, 200);
+        return response()->json(["status"=>true, 'message'=>'Updated successfully !'],$post, 200);
     }
 
     // DELETE /api/posts/{id}
