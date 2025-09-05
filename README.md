@@ -1,4 +1,4 @@
-LARAVEL PROJECT SETUP
+<h1>LARAVEL API</h1>
 
 create project ->  composer create-project laravel/laravel Laravel-API
 
