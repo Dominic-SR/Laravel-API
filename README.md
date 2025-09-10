@@ -1,6 +1,6 @@
 <h1>LARAVEL API</h1>
 
-create project ->  composer create-project laravel/laravel Laravel-API
+<p><b>Create Project</b> - composer create-project laravel/laravel Laravel-API</p>
 
 LARAVEL RESOURCE API CRUD
 create migration -> php artisan make:migration create_posts_table 
