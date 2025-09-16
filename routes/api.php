@@ -16,9 +16,9 @@ use App\Http\Controllers\BookController;
 |
 */
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+// Authentication API Routes Start
+// Route::post('/register', )
+// Authentication API Routes End
 
 // Resource API Routes Start
 Route::resource('posts', PostController::class);
